@@ -1,2 +1,0 @@
-# Calendar
-My calendar
