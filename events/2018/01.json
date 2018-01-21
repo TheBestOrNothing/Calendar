@@ -42,19 +42,20 @@
     "url": "http://google.com/",
     "start": "2018-01-25",
     "color": "#FFAAAA",
-    "textColor": "#3333FF"
+    "textColor": "#000"
   },
   {
     "title": "HPC Design",
     "url": "http://google.com/",
     "start": "2018-01-31",
-    "color": "#FFAAAA"
+    "color": "#FFAAAA",
+    "textColor": "#000"
   },
   {
     "title": "DevPlatform POC",
     "url": "http://google.com/",
     "start": "2018-01-26",
     "color": "#FFFFAA",
-    "textColor": "#FFF"
+    "textColor": "#000"
   }
 ]
