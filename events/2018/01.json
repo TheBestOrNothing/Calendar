@@ -34,37 +34,28 @@
     "end": "2018-01-12T12:30:00-05:00"
   },
   {
-    "title": "Lunch",
-    "start": "2018-01-12T12:00:00-05:00"
-  },
-  {
-    "title": "Meeting",
-    "start": "2018-01-12T14:30:00-05:00"
-  },
-  {
-    "title": "Happy Hour",
-    "start": "2018-01-12T17:30:00-05:00"
-  },
-  {
-    "title": "Dinner",
-    "start": "2018-01-12T20:00:00"
-  },
-  {
     "title": "Birthday Party",
     "start": "2018-01-14T07:00:00-05:00"
   },
   {
-    "title": "HPC Project",
+    "title": "HPC blueprint",
     "url": "http://google.com/",
-    "start": "2018-01-22",
-    "end": "2018-01-31",
+    "start": "2018-01-25",
     "color": "#FFAAAA",
     "textColor": "#3333FF"
   },
   {
-    "title": "POC design",
+    "title": "HPC Design",
     "url": "http://google.com/",
-    "start": "2018-01-22",
-    "end": "2018-01-26"
+    "start": "2018-01-31",
+    "color": "#FFAAAA",
+    "textColor": "#3333FF"
+  },
+  {
+    "title": "DevPlatform POC",
+    "url": "http://google.com/",
+    "start": "2018-01-26",
+    "color": "#FFFFAA",
+    "textColor": "#3333FF"
   }
 ]
