@@ -45,17 +45,24 @@
     "textColor": "#000"
   },
   {
+    "title": "DevPlatform POC Design",
+    "url": "http://google.com/",
+    "start": "2018-01-26",
+    "color": "#FFFFAA",
+    "textColor": "#000"
+  },
+  {
     "title": "HPC Design",
     "url": "http://google.com/",
     "start": "2018-01-31",
     "color": "#FFAAAA",
     "textColor": "#000"
-  },
+  }
   {
-    "title": "DevPlatform POC",
+    "title": "B:GetStarted solution",
     "url": "http://google.com/",
-    "start": "2018-01-26",
-    "color": "#FFFFAA",
+    "start": "2018-01-31",
+    "color": "#049BD2",
     "textColor": "#000"
   }
 ]
