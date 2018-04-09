@@ -34,7 +34,7 @@
         var _year = _date.getFullYear();
         var _month = _date.getMonth() + 1;
         if (_month < 10) _month = '0' + _month;
-        var _path1 = _year + '/' + _month;
+        var _path = _year + '/' + _month;
         $.ajax({
           url: 'http://www.majorityattack.com/Calendar/events/' + _path + '.json',
           dataType: 'json',
