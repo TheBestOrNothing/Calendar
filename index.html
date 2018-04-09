@@ -28,7 +28,28 @@
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events: 'http://www.majorityattack.com/Calendar/events/' + path + '.json?' + new Date()*1
+      //events: 'http://www.majorityattack.com/Calendar/events/' + path + '.json?' + new Date()*1
+      events: function(start, end, timezone, callback) {
+        $.ajax({
+          url: 'http://www.majorityattack.com/Calendar/events/' + path + '.json',
+          dataType: 'json',
+          data: {
+            // our hypothetical feed requires UNIX timestamps
+            start: start.unix(),
+            end: end.unix()
+          },
+          success: function(doc) {
+            var events = [];
+            $(doc).find('event').each(function() {
+              events.push({
+                title: $(this).attr('title'),
+                start: $(this).attr('start') // will be parsed
+              });
+            });
+            callback(events);
+          }
+        });
+      }
     });
 
   });
