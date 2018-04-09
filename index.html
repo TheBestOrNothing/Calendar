@@ -39,8 +39,8 @@
           dataType: 'json',
           data: {
             // our hypothetical feed requires UNIX timestamps
-            start: start.unix(),
-            end: end.unix()
+            start: start.format(),
+            end: end.format()
           },
           success: function(data) {
             callback(data);
