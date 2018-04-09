@@ -30,12 +30,13 @@
       //events: 'http://www.majorityattack.com/Calendar/events/' + path + '.json?' + new Date()*1
       events: function(start, end, timezone, callback) {
         var arrDate = start.format().split('-');
-        var date = new Date(arrDate[0]*1, arrDate[1]*1 - 1, arrDate[2]*1 + 15);
-        var month = date.getMonth() + 1;
-        if (month < 10) month = '0' + month;
-        var path = year + '/' + month;
+        var _date = new Date(arrDate[0]*1, arrDate[1]*1 - 1, arrDate[2]*1 + 15);
+        var _year = _date.getFullYear();
+        var _month = _date.getMonth() + 1;
+        if (_month < 10) _month = '0' + _month;
+        var _path1 = _year + '/' + _month;
         $.ajax({
-          url: 'http://www.majorityattack.com/Calendar/events/' + path + '.json',
+          url: 'http://www.majorityattack.com/Calendar/events/' + _path + '.json',
           dataType: 'json',
           data: {
             // our hypothetical feed requires UNIX timestamps
