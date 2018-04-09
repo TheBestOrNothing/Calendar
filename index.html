@@ -12,8 +12,7 @@
   $(document).ready(function() {
     var date = new Date();
     var year = date.getFullYear();
-    //var month = date.getMonth() + 1;
-    var month = 2;
+    var month = date.getMonth() + 1;
     if (month < 10) month = '0' + month;
     var path = year + '/' + month;
     var dateDefault = year + '-' + month +'-01'
@@ -30,6 +29,11 @@
       eventLimit: true, // allow "more" link when too many events
       //events: 'http://www.majorityattack.com/Calendar/events/' + path + '.json?' + new Date()*1
       events: function(start, end, timezone, callback) {
+        var arrDate = start.format().split('-');
+        var date = new Date(arrDate[0]*1, arrDate[1]*1, arrDate[2]*1 + 15);
+        var month = date.getMonth() + 1;
+        if (month < 10) month = '0' + month;
+        var path = year + '/' + month;
         $.ajax({
           url: 'http://www.majorityattack.com/Calendar/events/' + path + '.json',
           dataType: 'json',
@@ -38,15 +42,8 @@
             start: start.unix(),
             end: end.unix()
           },
-          success: function(doc) {
-            var events = [];
-            $(doc).find('event').each(function() {
-              events.push({
-                title: $(this).attr('title'),
-                start: $(this).attr('start') // will be parsed
-              });
-            });
-            callback(events);
+          success: function(data) {
+            callback(data);
           }
         });
       }
