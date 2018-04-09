@@ -30,7 +30,7 @@
       //events: 'http://www.majorityattack.com/Calendar/events/' + path + '.json?' + new Date()*1
       events: function(start, end, timezone, callback) {
         var arrDate = start.format().split('-');
-        var date = new Date(arrDate[0]*1, arrDate[1]*1, arrDate[2]*1 + 15);
+        var date = new Date(arrDate[0]*1, arrDate[1]*1 - 1, arrDate[2]*1 + 15);
         var month = date.getMonth() + 1;
         if (month < 10) month = '0' + month;
         var path = year + '/' + month;
